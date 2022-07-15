@@ -1,6 +1,7 @@
 from django.urls import path, include
-from .views import main
+from .views import multithreading_calculate_land_values, retrieve_land_values
 
 urlpatterns = [
-    path('', main)
+    path('updateLandValues/', multithreading_calculate_land_values),
+    path('getLandValues/', retrieve_land_values)
 ]
